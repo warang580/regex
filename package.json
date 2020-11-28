@@ -1,0 +1,26 @@
+{
+  "name": "@warang580/regex",
+  "version": "0.0.0",
+  "description": "Write complex regex without pain",
+  "repository": "github:warang580/regex",
+  "homepage": "https://github.com/warang580/regex",
+  "bugs": "https://github.com/warang580/regex/issues",
+  "scripts": {
+    "dev": "jest --colors --watch",
+    "test": "jest --colors",
+    "coverage": "jest --colors --coverage"
+  },
+  "keywords": [
+    "array",
+    "object",
+    "manipulating",
+    "data"
+  ],
+  "license": "MIT",
+  "main": "src/regex.js",
+  "publishConfig": { "registry": "https://registry.npmjs.org/" },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
