@@ -27,7 +27,7 @@ let any = function (expression) {
   return "(" + expression + ")*";
 }
 
-let optional = function (expression) {
+let maybe = function (expression) {
   return "(" + expression + ")?";
 }
 
@@ -35,11 +35,11 @@ let digit = function () {
   return "\\d";
 }
 
-let word = function () {
+let alphanum = function () {
   return "\\w";
 }
 
-let whitespace = function () {
+let space = function () {
   return "\\s";
 }
 
@@ -70,7 +70,7 @@ module.exports = {
   regex,
   start,
   end,
-  exactly, many, any, optional,
-  digit, word, all, whitespace, boundary,
+  exactly, many, any, maybe,
+  digit, alphanum, all, space, boundary,
   or,
 }

@@ -80,9 +80,9 @@ describe("any", () => {
   });
 });
 
-describe("optional", () => {
+describe("maybe", () => {
   it("match 0 or 1 character", function () {
-      let r = R.regex(R.start(), R.optional("b"), R.end());
+      let r = R.regex(R.start(), R.maybe("b"), R.end());
 
       expect(r.test(""))   .toStrictEqual(true);
       expect(r.test("b"))  .toStrictEqual(true);
@@ -100,9 +100,9 @@ describe("digit", () => {
   });
 });
 
-describe("word", () => {
-  it("match word (alphanumeric)", function () {
-      let r = R.regex(R.start(), R.word(), R.end());
+describe("alphanum", () => {
+  it("match alphanumeric", function () {
+      let r = R.regex(R.start(), R.alphanum(), R.end());
 
       expect(r.test("!")).toStrictEqual(false);
       expect(r.test("@")).toStrictEqual(false);
@@ -128,9 +128,9 @@ describe("all", () => {
   });
 });
 
-describe("whitespace", () => {
+describe("space", () => {
   it("match whitespace", function () {
-      let r = R.regex(R.start(), R.whitespace(), R.end());
+      let r = R.regex(R.start(), R.space(), R.end());
 
       expect(r.test("x")) .toStrictEqual(false);
       expect(r.test(" ")) .toStrictEqual(true);
